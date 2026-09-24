@@ -1,0 +1,7 @@
+services:
+  site-fight:
+    build: .
+    container_name: site-fight
+    ports:
+      - "${PORT:-8080}:80"
+    restart: unless-stopped
