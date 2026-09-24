@@ -260,16 +260,10 @@
         href="#modalidades"
         aria-label="Role para conhecer os treinos"
       >
-
-        <span class="scroll-label">
-          SCROLL
-        </span>
-
         <i
           data-lucide="chevron-down"
           aria-hidden="true"
         ></i>
-
       </a>
 
     </section>
@@ -924,9 +918,11 @@
         );
 
         if (scrollIndicator) {
+          const userStartedScrolling = window.scrollY > 5;
+
           scrollIndicator.classList.toggle(
             "is-hidden",
-            heroFinished
+            userStartedScrolling
           );
         }
 
